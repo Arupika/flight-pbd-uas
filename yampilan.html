@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flight Management Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body class="bg-light">
+  <div class="container py-5">
+    <h2 class="mb-4">Flight Management Dashboard</h2>
+
+    <!-- Flight Form -->
+    <div class="card mb-4">
+      <div class="card-header bg-primary text-white">Add / Edit Flight</div>
+      <div class="card-body">
+        <form id="flightForm">
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label for="flightNumber" class="form-label">Flight Number</label>
+              <input type="text" class="form-control" id="flightNumber" placeholder="e.g. FL1234" />
+            </div>
+            <div class="col-md-6">
+              <label for="airline" class="form-label">Airline</label>
+              <input type="text" class="form-control" id="airline" placeholder="e.g. Lion Air" />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label for="departure" class="form-label">Departure</label>
+              <input type="text" class="form-control" id="departure" placeholder="e.g. Jakarta (CGK)" />
+            </div>
+            <div class="col-md-6">
+              <label for="destination" class="form-label">Destination</label>
+              <input type="text" class="form-control" id="destination" placeholder="e.g. Surabaya (SUB)" />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label for="departureTime" class="form-label">Departure Time</label>
+              <input type="datetime-local" class="form-control" id="departureTime" />
+            </div>
+            <div class="col-md-6">
+              <label for="arrivalTime" class="form-label">Arrival Time</label>
+              <input type="datetime-local" class="form-control" id="arrivalTime" />
+            </div>
+          </div>
+          <button type="submit" class="btn btn-success">Save Flight</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Flight Table -->
+    <div class="card">
+      <div class="card-header bg-secondary text-white">List of Flights</div>
+      <div class="card-body">
+        <table class="table table-bordered table-hover">
+          <thead class="table-light">
+            <tr>
+              <th>No</th>
+              <th>Flight Number</th>
+              <th>Airline</th>
+              <th>Departure</th>
+              <th>Destination</th>
+              <th>Departure Time</th>
+              <th>Arrival Time</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="flightTable">
+            <tr>
+              <td>1</td>
+              <td>FL1234</td>
+              <td>Lion Air</td>
+              <td>Jakarta (CGK)</td>
+              <td>Surabaya (SUB)</td>
+              <td>2026-05-01 08:00</td>
+              <td>2026-05-01 09:30</td>
+              <td>
+                <button class="btn btn-sm btn-warning">Edit</button>
+                <button class="btn btn-sm btn-danger">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>FL5678</td>
+              <td>Citilink</td>
+              <td>Denpasar (DPS)</td>
+              <td>Yogyakarta (JOG)</td>
+              <td>2026-06-10 10:00</td>
+              <td>2026-06-10 11:45</td>
+              <td>
+                <button class="btn btn-sm btn-warning">Edit</button>
+                <button class="btn btn-sm btn-danger">Delete</button>
+              </td>
+            </tr>
+            <!-- Tambahkan data dummy lain jika perlu -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
